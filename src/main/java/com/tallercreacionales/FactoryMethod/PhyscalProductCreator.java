@@ -1,19 +1,17 @@
 package com.tallercreacionales.FactoryMethod;
 
-import com.tallercreacionales.FactoryMethod.DigitalProduct;
-
-public class DigitalProductCreator extends ProductCreator {
+public class PhyscalProductCreator extends ProductCreator {
 
     private int nextId = 1;
 
     @Override
     public Product createProduct() {
-        DigitalProduct p = new DigitalProduct();
+        PhysicalProduct p = new PhysicalProduct();
         p.setId(nextId++);
         p.setName("New Digital Product");
         p.setPrice(0.0);
-        p.setSizeMb(0);
-        p.setFormat("unknown");
+        p.setWeight(0.0);
+        p.setDimensions("unknown");
         return p;
     }
 
